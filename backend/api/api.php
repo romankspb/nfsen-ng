@@ -288,7 +288,9 @@ class API {
         $stored_output_formats = array(); // todo implement
         $stored_filters = array(); // todo implement
         
-        $folder = dirname(__FILE__, 2);
+        //$folder = dirname(__FILE__, 2);
+        $folder = '/var/nfdump/profiles-data';
+        $ports = Config::$cfg['general']['ports'];
         $pidfile = $folder . '/nfsen-ng.pid';
         $daemon_running = file_exists($pidfile);
         

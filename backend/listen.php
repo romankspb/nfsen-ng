@@ -23,7 +23,8 @@ try {
     exit();
 }
 
-$folder = dirname(__FILE__);
+//$folder = dirname(__FILE__);
+$folder = '/var/nfdump/profiles-data';
 $lock_file = fopen($folder . '/nfsen-ng.pid', 'c');
 $got_lock = flock($lock_file, LOCK_EX | LOCK_NB, $wouldblock);
 if ($lock_file === false || (!$got_lock && !$wouldblock)) {
