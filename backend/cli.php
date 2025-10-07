@@ -48,7 +48,8 @@ if ($argc < 2 || in_array($argv[1], ['--help', '-help', '-h', '-?'], true)) {
 
     <?php
 } else {
-    $folder = __DIR__;
+    //$folder = __DIR__;
+    $folder = '/var/nfdump/profiles-data';
     $pidfile = $folder . '/nfsen-ng.pid';
 
     if (in_array('import', $argv, true)) {

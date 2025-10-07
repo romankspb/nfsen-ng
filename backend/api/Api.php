@@ -278,7 +278,8 @@ class Api {
         $stored_output_formats = Config::$cfg['general']['formats'];
         $stored_filters = Config::$cfg['general']['filters'];
 
-        $folder = \dirname(__FILE__, 2);
+        //$folder = \dirname(__FILE__, 2);
+        $folder = '/var/nfdump/profiles-data';
         $pidfile = $folder . '/nfsen-ng.pid';
         $daemon_running = file_exists($pidfile);
 
